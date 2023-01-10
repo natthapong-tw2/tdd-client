@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Todo} from "./components/Todo";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         >
           Learn React
         </a>
-        <span>This is todo App</span>
+        <Todo/>
       </header>
     </div>
   );
