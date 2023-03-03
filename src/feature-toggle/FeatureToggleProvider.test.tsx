@@ -1,14 +1,18 @@
 import {render} from "@testing-library/react";
 import React, {createContext} from "react";
 
-const FeatureToggleContext = createContext({ foo: "bar"})
+type MyAppFeatureToggle = {
+  CH1025: boolean
+}
+
+const FeatureToggleContext = createContext<MyAppFeatureToggle>({ CH1025: false })
 
 type Props = {
   children: React.ReactElement
 }
 
 const FeatureToggleProvider: React.FC<Props> = ({children}): React.ReactElement =>
-  <FeatureToggleContext.Provider value={{foo: "bar"}}>
+  <FeatureToggleContext.Provider value={{ CH1025: false }}>
     { children }
   </FeatureToggleContext.Provider>
 
